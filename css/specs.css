@@ -1,0 +1,110 @@
+:root {
+    --primary--color-1: #041239;
+    --primary--color-2: #120025;
+    --primary--color-3: #011e43;
+    --primary--color-4: #091761;
+    --primary--color-5: #000000;
+    --primary--color-6: #450465;
+    --primary--color-7: #fff;
+    --primary--color-8: #242424;
+    --primary--color-9: #182e9f;
+    --primary--color-10: #761ea2;
+
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+/* QUADRO BRANCO */
+.specs{
+    position: absolute;
+    top: 0px;
+    left: 39%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    background: white;
+    border-radius: 14px;
+    padding: 45px;
+
+    z-index: 10;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+
+/* quando abrir */
+
+.specs.active{
+    opacity: 1;
+    visibility: visible;
+}
+/* GRID DAS SPECS */
+
+.specs_card{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+/* LINHA DO TÍTULO */
+
+.change_arrow{
+    grid-column: span 2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* BOTÕES */
+
+.change_arrow button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.change_arrow i{
+    font-size: 16px;
+    color: #111;
+}
+
+/* TÍTULO */
+.arrow_title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 15px;
+    color: #000;
+}
+
+/* BLOCOS DE TEXTO */
+.general_text{
+    background: var(--primary--color-8);
+    padding: 15px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+/* TITULOS DAS SPECS */
+
+.general_text h4{
+    margin: 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* VALORES */
+
+.general_text p{
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
