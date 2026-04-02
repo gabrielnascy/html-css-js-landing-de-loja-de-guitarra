@@ -62,32 +62,6 @@ prevButton.addEventListener('click', () => {
 
 })
 
-// =============================
-// TROCA DE MARCAS DAS GUITARRAS
-// =============================
-
-const brandButtons = document.querySelectorAll('.brands_btn')
-const sections = document.querySelectorAll('.projetos')
-
-brandButtons.forEach(button => {
-
-    button.addEventListener('click', () => {
-
-        const brand = button.dataset.brand
-
-        sections.forEach(section => {
-
-            section.classList.remove('active_1')
-
-            if (section.dataset.brand === brand) {
-                section.classList.add('active_1')
-            }
-
-        })
-
-    })
-
-})
 // ==============================
 //  ABRIR BOTAO PARA CADA CARD
 // ==============================
@@ -107,4 +81,29 @@ botoes.forEach((botao) => {
 
 })
 
+// ==================================
+//  MOSTRA AS VITRINES DE GUITARRAS
+// ==================================
 
+const buttons = document.querySelectorAll(".brands_btn button")
+const vitrines = document.querySelectorAll(".products_card")
+
+buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const brand = button.dataset.brand
+
+        vitrines.forEach(vitrine => {
+
+            vitrine.classList.remove("active_1")
+
+            if(vitrine.dataset.brand === brand){
+                vitrine.classList.add("active_1")
+            }
+
+        })
+
+    })
+
+})

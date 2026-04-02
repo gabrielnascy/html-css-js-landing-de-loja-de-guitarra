@@ -1,0 +1,162 @@
+:root {
+  --primary--color-1: #041239;
+  --primary--color-2: #120025;
+  --primary--color-3: #011e43;
+  --primary--color-4: #091761;
+  --primary--color-5: #000000;
+  --primary--color-6: #450465;
+  --primary--color-7: #fff;
+  --primary--color-8: #242424;
+  --primary--color-9: #182e9f;
+  --primary--color-10: #761ea2;
+
+  --vidro: rgba(255, 255, 255, 0.1);
+}
+
+/* SECTION GERAL */
+.products {
+  width: 100%;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+/* QUADRO DAS GUITARRAS */
+.products_card {
+  width: 100%;
+  max-width: 1200px;
+  background: linear-gradient(
+    160deg,
+    var(--primary--color-5),
+    var(--primary--color-8)
+  );
+
+  padding: 40px;
+  border-radius: 15px;
+
+  display: none;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.products_card.active_1 {
+  display: grid;
+}
+
+/* CARD DA GUITARRA */
+.guitar_card {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+
+  transition: 0.3s;
+  animation: cardFade 0.6s ease forwards;
+}
+
+.guitar_card:hover .guitar_card {
+  transform: translateY(-5px);
+}
+
+/* IMAGEM */
+.guitar_image {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 30px rgba(1, 125, 32, 0.304));
+}
+
+.ibanez_image {
+  width: 100%;
+  max-width: 95px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.242));
+}
+
+.fender_image {
+  width: 100%;
+  max-width: 95px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 0 30px rgba(137, 2, 16, 0.394));
+}
+
+/* TITULO */
+.guitar_title {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* PREÇO */
+.price {
+  font-size: 20px;
+  color: #00ff88;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* BOTÃO */
+.price_btn {
+  background: #00ff88;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.price_btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.price_btn:hover {
+  background: #00cc6a;
+}
+
+.brands_btn {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 1010px;
+  margin-bottom: 40px;
+  /* afasta da section abaixo */
+}
+
+/* BOTÕES */
+.brands_btn button {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+
+  background: #1a1a1a;
+  color: white;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER */
+.brands_btn button:hover {
+  background: #00ff88;
+  color: black;
+}
+
+@keyframes cardFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
